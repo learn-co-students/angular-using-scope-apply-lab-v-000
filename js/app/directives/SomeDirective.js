@@ -8,9 +8,13 @@ function SomeDirective() {
 		controller: function($scope) {
 			$scope.counter = 0;
 		},
+		// require: 'someDirective',
 		controllerAs: 'some',
 		link: function (scope, elem, attrs) {
-
+			window.onkeydown = function(){
+				scope.counter += 1;
+				scope.$apply();
+			};
 		}
 	}
 }
