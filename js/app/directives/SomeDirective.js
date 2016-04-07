@@ -10,7 +10,10 @@ function SomeDirective() {
 		},
 		controllerAs: 'some',
 		link: function (scope, elem, attrs) {
-
+      document.body.addEventListener("keypress", function () {
+        scope.counter++;
+        scope.$apply();
+      });
 		}
 	}
 }
