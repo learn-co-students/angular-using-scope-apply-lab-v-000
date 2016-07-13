@@ -2,8 +2,9 @@ function SomeDirective() {
 	return {
 		template: [
 			'<div>',
-				'<h3>{{ counter }}</h3>',
-			'</div>'
+				'<h3>{{ some.counter }}</h3>',
+			'</div>',
+			'<p>test</p>'
 		].join(''),
 		require: 'someDirective',
 		controller: function() {
@@ -14,7 +15,7 @@ function SomeDirective() {
 			var actualElement = elem[0];
 			var h3Element = actualElement.querySelector('h3');
 
-			h3Element.addEventListener('click', function () {
+			document.addEventListener('keydown', function () {
 					ctrl.counter ++;
 
 					scope.$apply();
