@@ -1,4 +1,4 @@
-function SomeDirective() {
+ofunction SomeDirective() {
 	return {
 		template: [
 			'<div>',
@@ -11,6 +11,11 @@ function SomeDirective() {
 		controllerAs: 'some',
 		link: function (scope, elem, attrs) {
 
+      document.addEventListener('keydown', function () {
+        ctrl.counter++;
+
+        scope.$apply();
+      });
 		}
 	}
 }
