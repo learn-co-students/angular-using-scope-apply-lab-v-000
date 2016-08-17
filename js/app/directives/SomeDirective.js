@@ -9,7 +9,7 @@ ofunction SomeDirective() {
 			$scope.counter = 0;
 		},
 		controllerAs: 'some',
-		link: function (scope, elem, attrs) {
+		link: function (scope, elem, attrs, ctrl) {
 
       document.addEventListener('keydown', function () {
         ctrl.counter++;
