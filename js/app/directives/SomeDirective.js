@@ -10,6 +10,10 @@ function SomeDirective() {
 		},
 		controllerAs: 'some',
 		link: function (scope, elem, attrs) {
+			document.onkeypress = function(){
+				scope.counter++;
+				scope.$apply();
+			}
 
 		}
 	}
