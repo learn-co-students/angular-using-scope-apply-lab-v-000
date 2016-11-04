@@ -10,7 +10,10 @@ function SomeDirective() {
 		},
 		controllerAs: 'some',
 		link: function (scope, elem, attrs) {
-
+			this.addEventListener('keydown', function(){
+				scope.counter ++
+				scope.$apply()
+			})
 		}
 	}
 }
