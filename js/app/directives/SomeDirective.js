@@ -9,8 +9,14 @@ function SomeDirective() {
 			$scope.counter = 0;
 		},
 		controllerAs: 'some',
-		link: function (scope, elem, attrs) {
-
+		require: 'someDirective',
+		link: function (scope, elem, attrs, ctrl) {
+			document.addEventListener('keydown', function () {
+				ctrl.counter++;
+				console.log('haaaaaaaaaay');
+				console.log(ctrl);
+				scope.$apply();
+			});
 		}
 	}
 }
