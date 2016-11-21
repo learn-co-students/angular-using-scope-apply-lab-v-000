@@ -1,0 +1,22 @@
+{
+  "name": "angular-using-scope-apply-lab-v-000",
+  "version": "1.0.0",
+  "description": "Using $apply to force a $digest to run a Model and View sync",
+  "main": "conf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kade042/angular-using-scope-apply-lab-v-000.git"
+  },
+  "author": "kade",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kade042/angular-using-scope-apply-lab-v-000/issues"
+  },
+  "homepage": "https://github.com/kade042/angular-using-scope-apply-lab-v-000#readme",
+  "devDependencies": {
+    "express": "^4.14.0"
+  }
+}
