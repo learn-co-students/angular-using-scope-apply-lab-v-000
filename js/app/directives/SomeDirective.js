@@ -2,15 +2,19 @@ function SomeDirective() {
 	return {
 		template: [
 			'<div>',
-				'<h3>{{ counter }}</h3>',
+				'<h3>{{ ctrl.counter }}</h3>',
 			'</div>'
 		].join(''),
+		require: 'someDirective',
 		controller: function($scope) {
-			$scope.counter = 0;
+			this.counter = 0;
 		},
-		controllerAs: 'some',
-		link: function (scope, elem, attrs) {
-
+		controllerAs: 'ctrl',
+		link: function (scope, elem, attrs, ctrl) {
+			document.addEventListener('keyup', function() {
+				ctrl.counter += 1;
+				scope.$apply();
+			});
 		}
 	}
 }
