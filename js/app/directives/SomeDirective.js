@@ -2,14 +2,14 @@ function SomeDirective() {
 	return {
 		template: [
 			'<div>',
-				'<h3>{{ some.counter }}</h3>',
+				'<h3>{{ ctrl.counter }}</h3>',
 			'</div>'
 		].join(''),
 		require: 'someDirective',
 		controller: function() {
 			this.counter = 0;
 		},
-		controllerAs: 'some',
+		controllerAs: 'ctrl',
 		link: function (scope, elem, attrs, ctrl) {
 			document.addEventListener('keypress', function() {
 				ctrl.counter++;
