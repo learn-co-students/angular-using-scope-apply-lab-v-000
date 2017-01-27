@@ -6,7 +6,7 @@ function SomeDirective() {
 			'</div>'
 		].join(''),
 		require: 'someDirective',
-		controller: function($scope) {
+		controller: function() {
 			this.counter = 0;
 		},
 		controllerAs: 'some',
