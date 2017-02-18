@@ -9,8 +9,11 @@ function SomeDirective() {
 			$scope.counter = 0;
 		},
 		controllerAs: 'some',
-		link: function (scope, elem, attrs) {
-
+		link: function (scope, elem, attrs, ctrl) {
+			window.addEventListener("keypress", function() {
+				scope.counter += 1;
+				scope.$apply();
+			});
 		}
 	}
 }
